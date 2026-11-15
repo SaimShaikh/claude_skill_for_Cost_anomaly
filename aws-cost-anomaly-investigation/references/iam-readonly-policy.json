@@ -1,0 +1,92 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CostAndBillingRead",
+      "Effect": "Allow",
+      "Action": [
+        "ce:Get*",
+        "ce:Describe*",
+        "ce:List*",
+        "savingsplans:Describe*",
+        "budgets:ViewBudget",
+        "cur:DescribeReportDefinitions",
+        "bcm-data-exports:Get*",
+        "bcm-data-exports:List*",
+        "organizations:ListAccounts",
+        "organizations:DescribeAccount"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "AttributionRead",
+      "Effect": "Allow",
+      "Action": [
+        "cloudtrail:LookupEvents",
+        "cloudtrail:StartQuery",
+        "cloudtrail:GetQueryResults",
+        "cloudtrail:DescribeQuery",
+        "config:GetResourceConfigHistory",
+        "config:SelectResourceConfig",
+        "config:SelectAggregateResourceConfig",
+        "cloudwatch:GetMetricStatistics",
+        "cloudwatch:GetMetricData",
+        "cloudwatch:ListMetrics",
+        "logs:DescribeLogGroups",
+        "logs:StartQuery",
+        "logs:GetQueryResults",
+        "tag:GetResources",
+        "health:DescribeEvents",
+        "guardduty:ListDetectors",
+        "guardduty:ListFindings",
+        "guardduty:GetFindings",
+        "iam:GenerateCredentialReport",
+        "iam:GetCredentialReport",
+        "trustedadvisor:Describe*",
+        "compute-optimizer:Get*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "ResourceDescribe",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:Describe*",
+        "autoscaling:Describe*",
+        "elasticloadbalancing:Describe*",
+        "rds:Describe*",
+        "eks:Describe*",
+        "eks:List*",
+        "ecs:Describe*",
+        "ecs:List*",
+        "lambda:GetFunctionConfiguration",
+        "lambda:ListFunctions",
+        "dynamodb:DescribeTable",
+        "dynamodb:ListTables",
+        "s3:GetBucketLocation",
+        "s3:GetLifecycleConfiguration",
+        "s3:GetBucketVersioning",
+        "s3:GetReplicationConfiguration",
+        "s3:ListAllMyBuckets",
+        "s3:ListBucketMultipartUploads"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "AthenaCurQuery",
+      "Effect": "Allow",
+      "Action": [
+        "athena:StartQueryExecution",
+        "athena:GetQueryExecution",
+        "athena:GetQueryResults",
+        "glue:GetDatabase",
+        "glue:GetTable",
+        "glue:GetPartitions",
+        "s3:GetObject",
+        "s3:ListBucket",
+        "s3:PutObject"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
